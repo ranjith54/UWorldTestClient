@@ -1,0 +1,59 @@
+<div class="test-interface-container">
+    <div class="header">
+        <img class="image-container" src="../../assets/uworld-lp-logo.svg" />
+        <button mat-button><i class="fas fa-sign-out-alt" style="color: #ffffff;"></i></button>
+    </div>
+    <!-- <app-instructions>
+    </app-instructions> -->
+    <div class="main-test-container">
+        <div class="content-wraper">
+            <div class="question-details-container">
+                <div class="question-container">
+                    <p class="question">1. Angular is Developed By</p>
+                    <div class="options-container">
+                        <button mat-raised-button class="option-button" *ngFor="let item of tempOptions"> {{item}}
+                        </button>
+                    </div>
+                </div>
+                <div class="button-containerr">
+                    <button mat-raised-button color="primary"> Next Question</button>
+                </div>
+            </div>
+            <div class="test-details-container">
+                <div class="timer-container">
+                    <p class="para">
+                        Time Left
+                    </p>
+                    <p class="para">
+                        00:10:00
+                    </p>
+                </div>
+                <div class="navigatior">
+                    <div class="attempt-details-container">
+                        <p class="para1">
+                            <span> 0 </span>
+                            <span> Answered Questions</span>
+                        </p>
+                        <p class="para1">
+                            <span> 10 </span>
+                            <span> Unanswered Questions </span>
+                        </p>
+                    </div>
+                    <div class="questions-wrapper">
+                        <div class="p-2 questionsss">
+                            <p class="questions-heading"> Questions (10) </p>
+                            <div class="questions-navigator">
+                                <button class="m-2" mat-raised-button *ngFor="let item of questionsNumberList">
+                                    {{item}}
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-4 submit-button">
+                            <button mat-raised-button color="primary" class="w-100"> Submit Test </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
