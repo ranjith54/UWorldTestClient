@@ -1,0 +1,28 @@
+<div class="dialog-main-container">
+    <div class="dialog-header-container">
+        <p>Take Photo</p>
+        <button mat-icon-button mat-dialog-close>
+            <i class="fas fa-1x fa-times"></i>
+        </button>
+    </div>
+    <p class="instruction-message">{{imageMessage}}</p>
+    <div class="video-container">
+        <webcam [height]="400" [width]="600" [trigger]="triggerObservable"
+            (imageCapture)="handleImage($event)" *ngIf="showWebcam"
+            [allowCameraSwitch]="true" [switchCamera]="nextWebcamObservable"
+            [videoOptions]="videoOptions" (cameraSwitched)="cameraWasSwitched($event)"
+            (initError)="handleInitError($event)"
+            [captureImageData]="true"
+        ></webcam>
+    </div>
+    <div class="action-buttons-container">
+        <button mat-raised-button color="primary" class="mr-3"  (click)="triggerSnapshot();"> Take Photos </button>
+        <button mat-raised-button color="primary" class="mr-3"  (click)="clearTakenPhotos();"> Clear Photos </button>
+        <button mat-raised-button color="primary"  (click)="savePhotos();"> Save Photos </button>
+    </div>
+    <div class="taken-images">
+        <div class="image-container" *ngFor="let pictureTaken of picturesTaken">
+            <img class="image" [src]="pictureTaken.imageAsDataUrl" />
+        </div>
+    </div>
+</div>
