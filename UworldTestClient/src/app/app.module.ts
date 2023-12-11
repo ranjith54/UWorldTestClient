@@ -18,6 +18,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { HomeComponent } from './home/home.component';
 import { TestInterfaceComponent } from './test-interface/test-interface.component';
 import { InstructionsComponent } from './instructions/instructions.component';
+import { WebcamComponent } from './webcam/webcam.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { InstructionsComponent } from './instructions/instructions.component';
     CamDialogComponent,
     HomeComponent,
     TestInterfaceComponent,
-    InstructionsComponent
+    InstructionsComponent,
+    WebcamComponent
   ],
   imports: [
     BrowserModule,
