@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - UworldTestInterface
+name: Build and deploy Node.js app to Azure Web App - uworldtestinterface
 
 on:
   push:
@@ -14,7 +14,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4       
+      - uses: actions/checkout@v4
+
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
@@ -23,10 +24,10 @@ jobs:
       - name: npm install, build, and test
         run: |
           npm install
-          npm run build --if-present    
+          npm run build --if-present         
 
       - name: Zip artifact for deployment
-        run: zip release.zip ./dist/* -r
+        run: zip release.zip ./dist/uworld-test-client/* -r
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
@@ -47,14 +48,14 @@ jobs:
         with:
           name: node-app
 
-      - name: unzip artifact for deployment
+      - name: Unzip artifact for deployment
         run: unzip release.zip
 
       - name: 'Deploy to Azure Web App'
-        uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
+        uses: azure/webapps-deploy@v2
         with:
-          app-name: 'UworldTestInterface'
+          app-name: 'uworldtestinterface'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1F96E26AC6E44407B05A6F11A81AA1DA }}
-          package: .
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_93D86F2B44444CD0AAFB0D555B8D45B2 }}
+          package: ./dist/uworld-test-client

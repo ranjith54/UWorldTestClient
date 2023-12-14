@@ -10,11 +10,15 @@ export class CommonServiceService {
   constructor(private http: HttpClient, private router: Router, private activedRoute: ActivatedRoute) { }
 
   public registerUser(data: any){
-    return this.http.post('https://localhost:44304/api/Users/register', data)
+    return this.http.post('https://uworldtestinterfaceapi.azurewebsites.net/api/Users/register', data)
   }
   
   public getUserDeatils(email:string, password:string) {
-    return this.http.get(`https://localhost:44304/api/Users/login/${email}/${password}`)
+    let data= {
+      email: email,
+      password: password
+    }
+    return this.http.post(`https://localhost:7285/api/Users/login`, data)
   }
 
   public checkAndNavigate() {
@@ -30,5 +34,29 @@ export class CommonServiceService {
         this.router.navigate(['./login'])
       }
     }
+  }
+
+  Encrypt(value: any) {
+    var result = "";
+    for (var i = 0; i < value.length; i++) {
+      if (i < value.length - 1) {
+        result += value.charCodeAt(i) + 10;
+        result += "-";
+      }
+      else {
+        result += value.charCodeAt(i) + 10;
+      }
+    }
+    return result;
+  }
+  
+  Decrypt(value: any) {
+    var result = "";
+    var array = value.split("-");
+
+    for (var i = 0; i < array.length; i++) {
+      result += String.fromCharCode(array[i] - 10);
+    }
+    return result;
   }
 }

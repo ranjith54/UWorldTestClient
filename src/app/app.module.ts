@@ -21,6 +21,7 @@ import { InstructionsComponent } from './instructions/instructions.component';
 import { WebcamComponent } from './webcam/webcam.component';
 import { CommonServiceService } from './common-service.service';
 import { HttpClientModule } from '@angular/common/http';
+import { WebsiteComponent } from './website/website.component';
 import { AuthenticateDialogComponent } from './authenticate-dialog/authenticate-dialog.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import { VideoTrackingComponent } from './video-tracking/video-tracking.component';
@@ -37,6 +38,7 @@ import { WarningDialogComponent } from './warning-dialog/warning-dialog.componen
     TestInterfaceComponent,
     InstructionsComponent,
     WebcamComponent,
+    WebsiteComponent,
     AuthenticateDialogComponent,
     VideoTrackingComponent,
     WarningDialogComponent

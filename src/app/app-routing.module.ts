@@ -6,9 +6,10 @@ import { HomeComponent } from './home/home.component';
 import { TestInterfaceComponent } from './test-interface/test-interface.component';
 import { InstructionsComponent } from './instructions/instructions.component';
 import { WebcamComponent } from './webcam/webcam.component';
+import { WebsiteComponent } from './website/website.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'register', pathMatch: 'full'},
+  {path: '', component:WebsiteComponent},
   {path: 'register', component:RegisterComponent},
   {path: 'login', component: LoginComponent},
   {path: 'home', component: HomeComponent},
