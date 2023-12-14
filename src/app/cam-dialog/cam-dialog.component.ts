@@ -85,6 +85,7 @@ export class CamDialogComponent {
 
   public clearTakenPhotos() {
     this.picturesTaken = []
+    this.errorMessage = ''
   }
 
   public async savePhotos() {
@@ -99,7 +100,6 @@ export class CamDialogComponent {
       let thirdImageFaceDetection;
       if(image1Input) {
         firstImageFaceDetection = await faceapi.detectSingleFace(image1Input, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceDescriptor();
-        console.log(firstImageFaceDetection)
       }
       if(image2Input) {
         secondImageFaceDetection = await faceapi.detectSingleFace(image2Input, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceDescriptor();

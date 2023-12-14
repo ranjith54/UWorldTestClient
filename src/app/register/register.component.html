@@ -45,8 +45,12 @@
             </div>
         </div>
         <div class="login-button-container">
+            <span class="err-msg">{{errorMessage}}</span>
             <button mat-raised-button color="primary" (click)="onClickSignIn()">
                 Sign in 
             </button>
+        </div>
+        <div class="text-center pb-3">
+            <span>Already have an account <a href="/login">Click Here</a> to login</span>
         </div>
     </div>
