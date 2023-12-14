@@ -58,4 +58,4 @@ jobs:
           app-name: 'uworldtestinterface'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_93D86F2B44444CD0AAFB0D555B8D45B2 }}
-          package: .
+          package: ./dist/uworld-test-client
