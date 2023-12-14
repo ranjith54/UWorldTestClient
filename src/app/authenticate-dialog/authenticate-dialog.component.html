@@ -1,0 +1,19 @@
+<div class="authenticate-dialog-container">
+    <div class="video-container">
+        <webcam [height]="350" [width]="600" [trigger]="triggerObservable"
+            (imageCapture)="handleImage($event)"
+            [allowCameraSwitch]="true" [switchCamera]="nextWebcamObservable"
+            (cameraSwitched)="cameraWasSwitched($event)"
+            (initError)="handleInitError($event)"
+            [captureImageData]="true"
+        ></webcam>
+        <button mat-raised-button color="primary" class="mt-3" (click)="triggerSnapshot()">
+            Capture Photo
+        </button>
+        <p class="err-msg">{{errorMessage}}</p>
+    </div>
+    <div class="captured-image-container" [hidden]="true">
+        <img #image1 class="image" [src]="picturesTaken?.imageAsDataUrl"/>
+        <img #image2 class="image" [src]="userImageDateUrls" />
+    </div>
+</div>
