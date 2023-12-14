@@ -14,7 +14,7 @@
             <div class="password-container">
                 <mat-form-field appearance="outline" class="custom-input">
                     <mat-label>Enter your password</mat-label>
-                    <input matInput [type]="hide ? 'password' : 'text'">
+                    <input matInput [type]="hide ? 'password' : 'text'" [(ngModel)]="password">
                     <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
                         [attr.aria-pressed]="hide">
                         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
@@ -23,8 +23,11 @@
             </div>
         </div>
         <div class="login-button-container">
-            <button mat-raised-button color="primary">
+            <button mat-raised-button color="primary" (click)="login()">
                 Login
             </button>
+        </div>
+        <div class="text-center pb-3">
+            <span>Don't have an account<a href="/register"> Click here </a> to register </span>
         </div>
     </div>

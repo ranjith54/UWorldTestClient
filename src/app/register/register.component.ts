@@ -3,6 +3,8 @@ import { FormControl, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { CamDialogComponent } from '../cam-dialog/cam-dialog.component';
 import { WebcamImage } from 'ngx-webcam';
+import { CommonServiceService } from '../common-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -16,9 +18,13 @@ export class RegisterComponent {
   password?: string;
   hide = true;
   photoUploadSucces?: boolean;
-  uploadedImages?: string[];
+  uploadedImages?: string[] =[];
+  errorMessage?: string;
 
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog, private commonService: CommonServiceService,
+    private router: Router) {
+      this.commonService.checkAndNavigate()
+    }
   
   getErrorMessage() {
     if (this.email.hasError('required')) {
@@ -35,8 +41,8 @@ export class RegisterComponent {
       disableClose: true
     }).afterClosed().subscribe((res: WebcamImage[]) => {
       if(res.length === 3) {
-        res.forEach(image => {
-          this.uploadedImages?.push(image.imageAsDataUrl);
+        res.forEach(item => {
+          this.uploadedImages?.push(item.imageAsDataUrl);
         });
         this.photoUploadSucces = true;
       }
@@ -44,14 +50,23 @@ export class RegisterComponent {
   }
 
   onClickSignIn() {
-    let registerObject: any = {
-      firstName: this.firstName,
-      lastName: this.lastName,
-      email: this.email.value,
-      password: this.password,
-      images: this.uploadedImages
+    if(this.firstName && this.lastName && this.email.valid && this.password && this.uploadedImages) {
+      let registerObject: any = {
+        firstName: this.firstName,
+        lastName: this.lastName,
+        email: this.email.value,
+        password: this.password,
+        images: this.uploadedImages
+      }
+      this.commonService.registerUser(registerObject).subscribe(result => {
+        if(result) {
+          this.router.navigate(['/login'])
+        }
+      })
     }
-    console.log(registerObject)
+    else {
+      this.errorMessage = 'Please provide all details'
+    }
   }
   clearPhotos() {
     this.photoUploadSucces = false;
