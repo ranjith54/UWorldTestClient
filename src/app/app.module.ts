@@ -21,6 +21,7 @@ import { InstructionsComponent } from './instructions/instructions.component';
 import { WebcamComponent } from './webcam/webcam.component';
 import { CommonServiceService } from './common-service.service';
 import { HttpClientModule } from '@angular/common/http';
+import { WebsiteComponent } from './website/website.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     TestInterfaceComponent,
     InstructionsComponent,
-    WebcamComponent
+    WebcamComponent,
+    WebsiteComponent
   ],
   imports: [
     BrowserModule,
