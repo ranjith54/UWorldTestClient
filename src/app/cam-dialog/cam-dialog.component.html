@@ -1,13 +1,13 @@
 <div class="dialog-main-container">
     <div class="dialog-header-container">
-        <p>Take Photo</p>
+        <p>Upload Photo</p>
         <button mat-icon-button mat-dialog-close>
             <i class="fas fa-1x fa-times"></i>
         </button>
     </div>
-    <p class="instruction-message">{{imageMessage}}</p>
+    <p class="instruction-message">{{getImageMessage()}}</p>
     <div class="video-container">
-        <webcam [height]="400" [width]="600" [trigger]="triggerObservable"
+        <webcam [height]="350" [width]="600" [trigger]="triggerObservable"
             (imageCapture)="handleImage($event)" *ngIf="showWebcam"
             [allowCameraSwitch]="true" [switchCamera]="nextWebcamObservable"
             [videoOptions]="videoOptions" (cameraSwitched)="cameraWasSwitched($event)"
@@ -16,13 +16,31 @@
         ></webcam>
     </div>
     <div class="action-buttons-container">
-        <button mat-raised-button color="primary" class="mr-3"  (click)="triggerSnapshot();"> Take Photos </button>
+        <button mat-raised-button color="primary" class="mr-3"  (click)="triggerSnapshot();"> Capture Photo </button>
         <button mat-raised-button color="primary" class="mr-3"  (click)="clearTakenPhotos();"> Clear Photos </button>
         <button mat-raised-button color="primary"  (click)="savePhotos();"> Save Photos </button>
     </div>
     <div class="taken-images">
-        <div class="image-container" *ngFor="let pictureTaken of picturesTaken">
-            <img class="image" [src]="pictureTaken.imageAsDataUrl" />
+        <div *ngIf="picturesTaken[0]" class="image-container">
+            <button class="close-button float-right" (click)="removePhoto(0)"><i class="fas fa-times fa-xs"></i></button>
+            <div>
+                <img #image0 class="image" [src]="picturesTaken[0].imageAsDataUrl" />
+            </div>
         </div>
+        <div *ngIf="picturesTaken[1]" class="image-container">
+            <button class="close-button float-right" (click)="removePhoto(1)"><i class="fas fa-times fa-xs"></i></button>
+            <div>
+                <img #image1 class="image" [src]="picturesTaken[1].imageAsDataUrl" />
+            </div>
+        </div>
+        <div *ngIf="picturesTaken[2]" class="image-container">
+            <button class="close-button float-right" (click)="removePhoto(2)"><i class="fas fa-times fa-xs"></i></button>
+            <div>
+                <img #image2 class="image" [src]="picturesTaken[2].imageAsDataUrl" />
+            </div>
+        </div>
+    </div>
+    <div class="error-message">
+        {{errorMessage}}
     </div>
 </div>

@@ -4,18 +4,30 @@
         <div class="logo-container">
             <img src="../../assets/uworld-lp-logo.svg" />
         </div>
+        <p class="info">Please Provide your details</p>
         <div class="login-inputs-container">
+            <div>
+                <mat-form-field appearance="outline" class="custom-input">
+                    <mat-label>Enter your First Name</mat-label>
+                    <input matInput placeholder="First Name" [(ngModel)]="firstName" required>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="outline" class="custom-input">
+                    <mat-label>Enter your Last Name</mat-label>
+                    <input matInput placeholder="Last Name" [(ngModel)]="lastName" required>
+                </mat-form-field>
+            </div>
             <div class="email-container">
                 <mat-form-field appearance="outline" class="custom-input">
                     <mat-label>Enter your email</mat-label>
                     <input matInput placeholder="Email" [formControl]="email" required>
-                    <mat-error>{{getErrorMessage()}}</mat-error>
                 </mat-form-field>
             </div>
             <div class="password-container">
                 <mat-form-field appearance="outline" class="custom-input">
                     <mat-label>Enter your password</mat-label>
-                    <input matInput [type]="hide ? 'password' : 'text'">
+                    <input matInput [type]="hide ? 'password' : 'text'" [(ngModel)]="password" required>
                     <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
                         [attr.aria-pressed]="hide">
                         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
@@ -24,12 +36,16 @@
             </div>
         </div>
         <div class="image-container">
-            <button mat-raised-button color="primary" (click)="openCameraDialog()">
-                Take Photo
+            <button *ngIf="!photoUploadSucces" mat-button color="primary" (click)="openCameraDialog()">
+                Upload Photo
             </button>
+            <div *ngIf="photoUploadSucces">
+                <span class="success-message">Photos Uploaded</span>
+                <button mat-button color="primary" (click)="clearPhotos()"> Clear Photos </button>
+            </div>
         </div>
         <div class="login-button-container">
-            <button mat-raised-button color="primary">
+            <button mat-raised-button color="primary" (click)="onClickSignIn()">
                 Sign in 
             </button>
         </div>

@@ -19,6 +19,8 @@ import { HomeComponent } from './home/home.component';
 import { TestInterfaceComponent } from './test-interface/test-interface.component';
 import { InstructionsComponent } from './instructions/instructions.component';
 import { WebcamComponent } from './webcam/webcam.component';
+import { CommonServiceService } from './common-service.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -43,9 +45,10 @@ import { WebcamComponent } from './webcam/webcam.component';
     MatButtonModule,
     MatInputModule,
     WebcamModule,
-    MatDialogModule
+    MatDialogModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [CommonServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

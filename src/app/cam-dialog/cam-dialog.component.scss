@@ -1,5 +1,5 @@
 .dialog-main-container {
-    padding: 10px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
 }
@@ -47,4 +47,23 @@
 
 .instruction-message {
     text-align: center;
+}
+
+.close-button {
+    background-color: transparent;
+    border: none;
+}
+
+.imageee {
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.image-border {
+    border: 1px solid  green;
+}
+.error-message {
+    margin: 20px;
+    color: red;
+    font-size: 18px;
 }
