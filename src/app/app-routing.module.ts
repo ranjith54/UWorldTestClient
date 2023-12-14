@@ -9,8 +9,7 @@ import { WebcamComponent } from './webcam/webcam.component';
 import { WebsiteComponent } from './website/website.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'website', pathMatch: 'full'},
-  {path: 'website', component:WebsiteComponent},
+  {path: '', component:WebsiteComponent},
   {path: 'register', component:RegisterComponent},
   {path: 'login', component: LoginComponent},
   {path: 'home', component: HomeComponent},

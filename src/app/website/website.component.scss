@@ -1,11 +1,30 @@
 .page {
     background-color: aliceblue;
     min-height: 100vh;
+    
+    .uworld {
+        margin-left: 50px;
+        display: flex;
+        justify-content: space-between;
+        
+        .logo {
+                float: left;
+            }
+        
+            .buttons {
+                padding-top: 2%;
+                padding-bottom: 2%;
+                width: 11%;
+                display: flex;
+                margin-right: 10px;
+            }
+    }
 
     .hr_container {
         text-align: center;
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
+        padding-top: 6%;
     
     
         .into-text {
@@ -26,10 +45,6 @@
             margin: 0 0 0;
         }
     
-        .buttons {
-            justify-content: center;
-            display: flex;
-        }
     
         .signup-button {
             /* Green */
@@ -49,11 +64,6 @@
             font-size: 16px;
             margin-left: 40px;
         }
-    }
-    .uworld {
-        margin-left: 50px;
-        display: flex;
-        justify-content: left;
     }
     .gap{
         margin-bottom: 50px;

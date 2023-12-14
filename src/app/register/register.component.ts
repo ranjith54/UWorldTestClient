@@ -55,7 +55,7 @@ export class RegisterComponent {
         firstName: this.firstName,
         lastName: this.lastName,
         email: this.email.value,
-        password: this.password,
+        password: this.commonService.Encrypt(this.password),
         images: this.uploadedImages
       }
       this.commonService.registerUser(registerObject).subscribe(result => {
