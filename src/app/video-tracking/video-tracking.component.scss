@@ -1,0 +1,12 @@
+.main-dialog-container {
+    height: 90%;
+    width: 100%;
+}
+.video-container {
+    height: 100%;
+    width: 100%;
+}
+
+::ng-deep .mat-mdc-dialog-container .mdc-dialog__surface {
+    overflow: hidden !important;
+}

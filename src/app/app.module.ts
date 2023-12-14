@@ -22,6 +22,10 @@ import { WebcamComponent } from './webcam/webcam.component';
 import { CommonServiceService } from './common-service.service';
 import { HttpClientModule } from '@angular/common/http';
 import { WebsiteComponent } from './website/website.component';
+import { AuthenticateDialogComponent } from './authenticate-dialog/authenticate-dialog.component';
+import {DragDropModule} from '@angular/cdk/drag-drop';
+import { VideoTrackingComponent } from './video-tracking/video-tracking.component';
+import { WarningDialogComponent } from './warning-dialog/warning-dialog.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +38,10 @@ import { WebsiteComponent } from './website/website.component';
     TestInterfaceComponent,
     InstructionsComponent,
     WebcamComponent,
-    WebsiteComponent
+    WebsiteComponent,
+    AuthenticateDialogComponent,
+    VideoTrackingComponent,
+    WarningDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +55,8 @@ import { WebsiteComponent } from './website/website.component';
     MatInputModule,
     WebcamModule,
     MatDialogModule,
-    HttpClientModule
+    HttpClientModule,
+    DragDropModule
   ],
   providers: [CommonServiceService],
   bootstrap: [AppComponent]

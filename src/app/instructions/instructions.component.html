@@ -9,10 +9,10 @@
                 <li class="list-item"><span class="menu-item">Marking Scheme: </span> Every Correct response, get 1 mark </li>
             </ol>
             <div class="buttons-container">
-                <button mat-raised-button class="mat-custom-button" color="primary">
+                <button mat-raised-button class="mat-custom-button" color="primary" (click)="onClickAuthenticate()" [disabled]="isAuthenticated">
                     Authenticate
                 </button>
-                <button mat-raised-button class="mat-custom-button" color="primary">
+                <button mat-raised-button class="mat-custom-button" color="primary" [disabled]="!isAuthenticated" (click)="startTest()">
                     Start Assignment
                 </button>
             </div>

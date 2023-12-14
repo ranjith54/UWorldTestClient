@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
     <img #image1 class="image" src="../../assets/huma2.jpg" />
     <img #image2 class="image" src="../../assets/human.jpg" />
 </div>
@@ -8,4 +8,15 @@
 <div>
     {{EDistance}}
     {{message}}
+</div> -->
+
+<div class="video-container" cdkDrag>
+    <video #video
+          [width]="WIDTH"
+          [height]="HEIGHT"
+          autoplay
+          muted
+          >
+   </video>
+   <div #canvas></div>
 </div>
