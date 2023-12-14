@@ -26,7 +26,9 @@ export class LoginComponent {
 
   login() {
     if(this.email.valid && this.password && this.email.value) {
-      this.commonService.getUserDeatils(this.email.value, this.password).subscribe(result => {
+      let EncryptedPassword = this.commonService.Encrypt(this.password);
+      let Decrypted = this.commonService.Decrypt(EncryptedPassword)
+      this.commonService.getUserDeatils(this.email.value, EncryptedPassword).subscribe(result => {
         localStorage.setItem('userDetails', JSON.stringify(result))
         this.router.navigate(['./home'])
       })
