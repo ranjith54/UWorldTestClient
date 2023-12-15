@@ -7,7 +7,7 @@
             (initError)="handleInitError($event)"
             [captureImageData]="true"
         ></webcam>
-        <button mat-raised-button color="primary" class="mt-3" (click)="triggerSnapshot()">
+        <button mat-raised-button color="primary" class="mt-3" (click)="triggerSnapshot()" [disabled]="isAuthenticating">
             Capture Photo
         </button>
         <p class="err-msg">{{errorMessage}}</p>
