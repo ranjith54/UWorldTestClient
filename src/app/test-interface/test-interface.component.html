@@ -44,7 +44,7 @@
                         <div class="p-2 questionsss">
                             <p class="questions-heading"> Questions ({{questionsData?.length}}) </p>
                             <div class="questions-navigator">
-                                <button class="m-2" mat-raised-button *ngFor="let item of questionsData; index as i" (click)="navigateQuestion(i)">
+                                <button  mat-raised-button *ngFor="let item of questionsData; index as i" [ngClass]="!submittedquestion(item) ? 'answered-question' : 'm-2'" (click)="navigateQuestion(i)">
                                     {{i + 1}}
                                 </button>
                             </div>
