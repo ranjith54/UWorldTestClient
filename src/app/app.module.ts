@@ -59,6 +59,7 @@ import { WarningDialogComponent } from './warning-dialog/warning-dialog.componen
     DragDropModule
   ],
   providers: [CommonServiceService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [VideoTrackingComponent]
 })
 export class AppModule { }

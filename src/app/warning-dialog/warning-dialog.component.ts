@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { Component, Inject } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-warning-dialog',
@@ -8,9 +8,11 @@ import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 })
 export class WarningDialogComponent {
   
+  message?: string;
   constructor(public dialogRef: MatDialogRef<WarningDialogComponent>,
-    public dialog: MatDialog,){
-
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    public dialog: MatDialog ){
+      this.message = data;
   }
 
   public isWarningAccepted(isAccepted: boolean){
