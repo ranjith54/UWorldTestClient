@@ -7,13 +7,15 @@
                 "questionId": "1",
                 "questionText": "For which of the following disciplines is Nobel Prize awarded?",
                 "options": ["Physics and Chemistry", "Physiology or Medicine","Literature, Peace and Economics","All of the above"],
-                "correctAnswer": "3"
+                "correctAnswer": "3",
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "2",
                 "questionText": "In which year of First World War Germany declared war on Russia and France?",
                 "options": ["1914", "1915","1916","1917"],
-                "correctAnswer": "0"
+                "correctAnswer": "0",
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "3",
@@ -24,7 +26,8 @@
                     "Institute of Company of Accounts Organization",
                     "None of the above"
                 ],
-                "correctAnswer": "0"
+                "correctAnswer": "0",
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "4",
@@ -35,7 +38,8 @@
                     "mica",
                     "None of the above"
                 ],
-                "correctAnswer":"2"
+                "correctAnswer":"2",
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "5",
@@ -46,7 +50,8 @@
                     "30",
                     "17"
                 ],
-                "correctAnswer": "1"
+                "correctAnswer": "1",
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "6",
@@ -57,7 +62,8 @@
                     "Tirupati",
                     "Amaravati"
                 ],
-                "correctAnswer": "4"
+                "correctAnswer": "4",
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "7",
@@ -68,7 +74,8 @@
                     "Krishna",
                     "Narmada"
                 ],
-                "correctAnswer": "2"
+                "correctAnswer": "2",
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "8",
@@ -79,7 +86,8 @@
                     "Karnataka",
                     "Goa"
                 ],
-                "correctAnswer": "1"
+                "correctAnswer": "1",
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "9",
@@ -90,7 +98,8 @@
                     "Prayagraj",
                     "Nasik"
                 ],
-                "correctAnswer": "3"
+                "correctAnswer": "3",
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "10",
@@ -101,7 +110,8 @@
                     "Uttarakhand",
                     "Himachal Pradesh"
                 ],
-                "correctAnswer": "1"
+                "correctAnswer": "1",
+                "sumbittedAnswer" :""
             }
         ]
     },
@@ -118,7 +128,8 @@
                     "Pune",
                     "Chennai"
                 ],
-                "correctAnswer": "1"
+                "correctAnswer": "1",
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "25",
@@ -129,7 +140,8 @@
                     "Taj Mahal",
                     "Hampi"
                 ],
-                "correctAnswer": "0"
+                "correctAnswer": "0",
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "26",
@@ -140,7 +152,8 @@
                     "Odissi",
                     "Mohiniyattam"
                 ],
-                "correctAnswer": "3"
+                "correctAnswer": "3",
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "27",
@@ -151,7 +164,8 @@
                     "Chickpeas",
                     "Paneer"
                 ],
-                "correctAnswer": "2"
+                "correctAnswer": "2",
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "28",
@@ -162,7 +176,8 @@
                     "Andhra Pradesh",
                     "West Bengal"
                 ],
-                "correctAnswer": "1"
+                "correctAnswer": "1",
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "29",
@@ -173,7 +188,8 @@
                     "Black Pepper",
                     "Turmeric"
                 ],
-                "correctAnswer": "2"
+                "correctAnswer": "2",
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "30",
@@ -184,7 +200,8 @@
                     "Rp",
                     "₨"
                 ],
-                "correctAnswer": "0"
+                "correctAnswer": "0",
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "31",
@@ -195,7 +212,8 @@
                     "Kolkata",
                     "Chennai"
                 ],
-                "correctAnswer": "2"
+                "correctAnswer": "2",
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "32",
@@ -206,7 +224,8 @@
                     "Diwali",
                     "Durga Puja"
                 ],
-                "correctAnswer": "3"
+                "correctAnswer": "3",
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "33",
@@ -217,7 +236,8 @@
                     "Uttarakhand",
                     "Jammu and Kashmir"
                 ],
-                "correctAnswer": "1"
+                "correctAnswer": "1",
+                "sumbittedAnswer" :""
             }
         ]
     },
@@ -234,7 +254,8 @@
                     "Charminar",
                     "Mysore Palace"
                 ],
-                "correctAnswer": "0"
+                "correctAnswer": "0",
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "35",
@@ -245,7 +266,8 @@
                     "Sarangi",
                     "Tabla"
                 ],
-                "correctAnswer": "2"
+                "correctAnswer": "2",
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "36",
@@ -256,7 +278,8 @@
                     "Gatka",
                     "Mallakhamb"
                 ],
-                "correctAnswer": "0"
+                "correctAnswer": "0",
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "37",
@@ -267,7 +290,8 @@
                     "Jalebi",
                     "Rasmalai"
                 ],
-                "correctAnswer": "0"
+                "correctAnswer": "0",
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "38",
@@ -278,7 +302,8 @@
                     "Godavari",
                     "Krishna"
                 ],
-                "correctAnswer": "0"
+                "correctAnswer": "0",
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "39",
@@ -289,7 +314,8 @@
                     "Andhra Pradesh",
                     "Tamil Nadu"
                 ],
-                "correctAnswer": "0"
+                "correctAnswer": "0",
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "40", "questionText": "Which Indian hill station is known as the \"Queen of the Hills\"?",
@@ -299,7 +325,8 @@
                     "Munnar",
                     "Ooty"
                 ],
-                "correctAnswer": "0"
+                "correctAnswer": "0",
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "41",
@@ -310,7 +337,8 @@
                     "Janmashtami",
                     "Diwali"
                 ],
-                "correctAnswer": "2"
+                "correctAnswer": "2",
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "42",
@@ -321,7 +349,8 @@
                     "Kabaddi",
                     "Football"
                 ],
-                "correctAnswer": "0"
+                "correctAnswer": "0",
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "43",
@@ -332,7 +361,8 @@
                     "Kolkata",
                     "Chennai"
                 ],
-                "correctAnswer": "2"
+                "correctAnswer": "2",
+                "sumbittedAnswer" :""
             }
         ]
     },
@@ -349,7 +379,8 @@
                     "Kolkata",
                     "Bangalore"
                 ],
-                "correctAnswer": "0"
+                "correctAnswer": "0",
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "45",
@@ -360,7 +391,8 @@
                     "Folk music",
                     "Pop music"
                 ],
-                "correctAnswer": "0"
+                "correctAnswer": "0",
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "46",
@@ -371,7 +403,8 @@
                     "Ginger",
                     "Asafoetida"
                 ],
-                "correctAnswer": "3"
+                "correctAnswer": "3",
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "47",
@@ -382,7 +415,8 @@
                     "Diwali",
                     "Durga Puja"
                 ],
-                "correctAnswer": "3"
+                "correctAnswer": "3",
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "48",
@@ -393,7 +427,8 @@
                     "Andhra Pradesh",
                     "Tamil Nadu"
                 ],
-                "correctAnswer": "0"
+                "correctAnswer": "0",
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "49",
@@ -404,7 +439,8 @@
                     "Rp",
                     "₨"
                 ],
-                "correctAnswer": "0"
+                "correctAnswer": "0",
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "50", "questionText": "What is the traditional Indian attire worn by men for formal occasions?",
@@ -414,7 +450,8 @@
                     "Dhoti",
                     "Lungi"
                 ],
-                "correctAnswer": "0"
+                "correctAnswer": "0",
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "51",
@@ -425,7 +462,8 @@
                     "Munnar",
                     "Ooty"
                 ],
-                "correctAnswer": "0"
+                "correctAnswer": "0",
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "52",
@@ -436,7 +474,8 @@
                     "Odissi",
                     "Bharatanatyam"
                 ],
-                "correctAnswer": "0"
+                "correctAnswer": "0",
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "53",
@@ -447,7 +486,8 @@
                     "Wankhede Stadium, Mumbai",
                     "M. Chinnaswamy Stadium, Bangalore"
                 ],
-                "correctAnswer": "0"
+                "correctAnswer": "0",
+                "sumbittedAnswer" :""
             }
         ]
     },
@@ -464,7 +504,8 @@
                     "Ganesh Chaturthi",
                     "Lohri"
                 ],
-                "correctAnswer": 0
+                "correctAnswer": 0,
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "55",
@@ -475,7 +516,8 @@
                     "Dupatta",
                     "Mangtika (Tikka)"
                 ],
-                "correctAnswer": 3
+                "correctAnswer": 3,
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "56",
@@ -486,7 +528,8 @@
                     "Kuchipudi",
                     "Kathak"
                 ],
-                "correctAnswer": 1
+                "correctAnswer": 1,
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "57",
@@ -497,7 +540,8 @@
                     "Cumin",
                     "Fennel seeds"
                 ],
-                "correctAnswer": 0
+                "correctAnswer": 0,
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "58",
@@ -508,7 +552,8 @@
                     "Kabbadi",
                     "Football"
                 ],
-                "correctAnswer": 0
+                "correctAnswer": 0,
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "59",
@@ -519,7 +564,8 @@
                     "Hawa Mahal",
                     "Qutub Minar"
                 ],
-                "correctAnswer": 0
+                "correctAnswer": 0,
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "60",
@@ -530,7 +576,8 @@
                     "Yoga",
                     "Siddha medicine"
                 ],
-                "correctAnswer": 0
+                "correctAnswer": 0,
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "61",
@@ -541,7 +588,8 @@
                     "Panchatantra",
                     "Vedas"
                 ],
-                "correctAnswer": 2
+                "correctAnswer": 2,
+                "sumbittedAnswer" :""
             },
             {
                 "questionId": "62",
@@ -552,7 +600,8 @@
                     "Carrom",
                     "Snakes and Ladders"
                 ],
-                "correctAnswer": 0
+                "correctAnswer": 0,
+                "sumbittedAnswer" :""
             }
         ]
     }

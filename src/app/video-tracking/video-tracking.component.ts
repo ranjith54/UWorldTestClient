@@ -99,13 +99,13 @@ export class VideoTrackingComponent {
 
         if (this.detection.length == 0) {
           if (!this.haveWarning) {
-            this.sendWarning('You are left from the test. Please be here while attempting the test');
+            this.sendWarning('Please align your face with the camera and make sure you are alone while taking the test.');
           }
         }
 
         if (this.detection.length > 1) {
           if (!this.haveWarning) {
-            this.sendWarning('Other person is entered');
+            this.sendWarning('Please align your face with the camera and make sure you are alone while taking the test.');
           }
         }
         // this.canvas.getContext('2d').clearRect(

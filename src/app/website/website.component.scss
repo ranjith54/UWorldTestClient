@@ -1,9 +1,10 @@
 .page {
     background-color: aliceblue;
     min-height: 100vh;
+    min-width: 100vh;
 
     .uworld {
-        margin-left: 50px;
+        margin-left: 1%;
         display: flex;
         justify-content: space-between;
 
@@ -25,6 +26,7 @@
         display: flex;
         justify-content: space-evenly;
         padding-top: 6%;
+        align-items: center;
 
 
         .into-text {
@@ -33,6 +35,11 @@
             margin: -10px auto 20px;
             color: #39424E;
             text-align: center;
+            white-space: pre-wrap;
+
+            .break-lines{
+             padding-left: 25%;
+            }
         }
 
 
