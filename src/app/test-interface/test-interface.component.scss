@@ -62,7 +62,7 @@
     margin: 15px
 }
 .option-button-answered {
-    background-color: green !important;
+    background-color: rgb(182, 235, 182) !important;
     width: 35%;
     margin: 15px
 }
@@ -137,11 +137,17 @@
 }
 
 .answered {
-    background-color: green;
+    background-color: rgb(182, 235, 182);
     padding: 8px;
     border-radius: 20px;
     color: white;
     margin-right: 8px;
+}
+.answered-question{
+    color: rgb(200, 17, 17) !important;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    background-color: rgb(246, 209, 151) !important;
 }
 
 .un-answered {

@@ -114,9 +114,12 @@ export class TestInterfaceComponent {
   }
   sumbitted(item: any){
     this.currentQuestionData.sumbittedAnswer = item;
-    console.log(this.currentQuestionData.sumbittedAnswer)
   }
   answeredCount(): number{
   return this.questionsData.filter((x:any) => x.sumbittedAnswer != "").length;
+  }
+
+  submittedquestion(item : any){
+  return item.sumbittedAnswer == "" ;
   }
 }
