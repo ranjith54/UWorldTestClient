@@ -39,3 +39,11 @@
     padding-right: 50px;
     padding-bottom: 20px;
 }
+.click {
+    cursor: pointer;
+    color: #007bff;
+    margin: 6px;
+}
+.click:hover {
+     text-decoration: underline;
+}

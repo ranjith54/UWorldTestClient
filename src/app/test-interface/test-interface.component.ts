@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { VideoTrackingComponent } from '../video-tracking/video-tracking.component';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CommonServiceService } from '../common-service.service';
 
 @Component({
@@ -16,8 +16,11 @@ export class TestInterfaceComponent {
   currentQuestionData: any;
   currentQuestionIndex = 0;
   display: any;
+  videoDialogRef: any;
 
-  constructor(public dialog: MatDialog, private route: ActivatedRoute, private commonService: CommonServiceService) {
+  constructor(public dialog: MatDialog, private route: ActivatedRoute, private commonService: CommonServiceService,
+    public router: Router
+    ) {
     let assignmentId = this.route.snapshot.paramMap.get('assignmentId');
     if(assignmentId) {
       this.loadAssigmentData(+assignmentId);
@@ -26,7 +29,7 @@ export class TestInterfaceComponent {
       this.loadAssigmentData(0);
     }
     
-    this.dialog.open(VideoTrackingComponent, {
+    this.videoDialogRef = this.dialog.open(VideoTrackingComponent, {
       height: '200px',
       width: '200px',
       disableClose: true,
@@ -89,5 +92,10 @@ export class TestInterfaceComponent {
         clearInterval(timeInterval);
       }
     }, 1000)
+  }
+
+  submitTest() {
+    this.videoDialogRef.close();
+    this.router.navigate(['./home'])
   }
 }

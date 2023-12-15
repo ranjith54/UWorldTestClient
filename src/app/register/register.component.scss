@@ -63,3 +63,11 @@
     color: red;
     padding-right: 10px;
 }
+.click {
+    cursor: pointer;
+    color: #007bff;
+    margin: 6px;
+}
+.click:hover {
+     text-decoration: underline;
+}

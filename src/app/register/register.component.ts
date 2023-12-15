@@ -72,4 +72,8 @@ export class RegisterComponent {
     this.photoUploadSucces = false;
     this.uploadedImages = []
   }
+
+  redirect () {
+    this.router.navigate(['./login'])
+  }
 }

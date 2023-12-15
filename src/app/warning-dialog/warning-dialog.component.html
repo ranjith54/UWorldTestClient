@@ -3,8 +3,8 @@
         <p class="warning-text">Warning</p>
     </div>
     <div class="description-container">
-        <p>
-            You video is not proper
+        <p *ngIf="message">
+            {{message}}
         </p>
     </div>
 

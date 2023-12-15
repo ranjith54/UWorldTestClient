@@ -1,18 +1,18 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="#">UWorldTestClient</a>
+    <a class="navbar-brand" href="#"><img class="logo-image" src="../../assets/uworld-logo-white.svg"/></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
+      <!-- <ul class="navbar-nav mr-auto">
         <li class="nav-item">
             <a class="nav-link">Dashboard</a>
           </li>
-      </ul>
+      </ul> -->
     </div>
     <div class="right-container">
-      <i class="fas fa-user fa-lg mr-2" style="color: #f9fafb;"> </i> <p class="user-name">{{userName}}</p>
+      <i class="fas fa-user fa-lg mr-2" style="color: #f9fafb;"> </i> <p class="user-name">{{userName | titlecase}}</p>
         <button mat-button (click)="logout()"><i class="fas fa-sign-out-alt" style="color: #ffffff;"></i></button>
     </div>
   </nav>
