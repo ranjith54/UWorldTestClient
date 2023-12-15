@@ -46,4 +46,7 @@ export class InstructionsComponent {
   startTest() {
     this.route.navigate([`./test-interface/${this.assignmentId}`])
   }
+  back(){
+    this.route.navigate([``])
+  }
 }
