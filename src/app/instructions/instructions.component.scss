@@ -6,11 +6,15 @@
     justify-content: center;
     align-items: center;
     padding: 40px;
-    background-color:aliceblue;
 }
 
 .header{
-    background-color:#007bff!important;
+    background-color:#164687 !important;
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
 }
 
 .instructions-container {
@@ -81,4 +85,10 @@
 .authentication-message {
     color: green;
     font-size: 18px;
+}
+
+.cc-btn {
+    color: white;
+    padding: 0px;
+    margin: 0px;
 }
