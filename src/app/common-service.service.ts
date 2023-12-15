@@ -18,7 +18,7 @@ export class CommonServiceService {
       email: email,
       password: password
     }
-    return this.http.post(`https://localhost:7285/api/Users/login`, data)
+    return this.http.post(`https://uworldtestinterfaceapi.azurewebsites.net/api/Users/login`, data)
   }
 
   public checkAndNavigate() {
