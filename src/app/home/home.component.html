@@ -1,4 +1,16 @@
 <div>
     <app-header>
     </app-header>
+    <div class="main-content-container">
+        <p class="assignments-heading">Assignments</p>
+        <div class="assignments-list-container">
+            <div *ngFor="let item of assignmentsData" class="assignment">
+                <div class="assignment-details-container">
+                    <p class="assignment-name"><span class="assignment-name-icon"><i class="far fa-file-alt fa-lg mr-2" style="color: #3f51b5;"></i></span>{{item.assignmentName}}</p>
+                    <p class="assignment-questions">Questions: <span style="color: #3f51b5;">{{item.questions.length}}</span></p>
+                </div>
+                <button class="float-right" mat-raised-button color="primary"(click)="startTest(item.assignmentId)">Start Test</button>
+            </div>
+        </div>
+    </div>
 </div>

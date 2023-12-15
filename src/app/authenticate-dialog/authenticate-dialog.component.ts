@@ -85,6 +85,7 @@ export class AuthenticateDialogComponent {
 
       if(firstImageFaceDetection && secondImageFaceDetection){
         let EDistance = faceapi.euclideanDistance(firstImageFaceDetection.descriptor, secondImageFaceDetection.descriptor);
+        console.log(EDistance)
         if(EDistance <= 0.6) {
           this.dialogRef.close(true)
         }

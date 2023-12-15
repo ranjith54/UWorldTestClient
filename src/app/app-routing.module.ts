@@ -13,8 +13,8 @@ const routes: Routes = [
   {path: 'register', component:RegisterComponent},
   {path: 'login', component: LoginComponent},
   {path: 'home', component: HomeComponent},
-  {path: 'test-interface', component: TestInterfaceComponent},
-  {path: 'instructions', component: InstructionsComponent},
+  {path: 'test-interface/:assignmentId', component: TestInterfaceComponent},
+  {path: 'instructions/:assignmentId', component: InstructionsComponent},
   {path: 'face-api', component: WebcamComponent}
 ];
 
