@@ -1,0 +1,39 @@
+.main-content-container{
+    height: 100%;
+    width: 100%;
+    padding: 40px;
+}
+
+.assignments-heading {
+    font-size: 22px;
+    font-weight: 500;
+    color: #3f51b5;
+}
+.assignments-list-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.assignment {
+    width: 20%;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0px 4px 16px 0px #7B879429;
+    border-radius: 8px;
+}
+
+.assignment-name-icon {
+    font-size: 16px;
+}
+
+.assignment-name {
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.assignment-questions {
+    font-size: 16px;
+}

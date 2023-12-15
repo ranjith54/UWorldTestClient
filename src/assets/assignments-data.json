@@ -1,0 +1,560 @@
+[
+    {
+        "assignmentId": 0,
+        "assignmentName": "Assignment 1",
+        "questions": [
+            {
+                "questionId": "1",
+                "questionText": "For which of the following disciplines is Nobel Prize awarded?",
+                "options": ["Physics and Chemistry", "Physiology or Medicine","Literature, Peace and Economics","All of the above"],
+                "correctAnswer": "3"
+            },
+            {
+                "questionId": "2",
+                "questionText": "In which year of First World War Germany declared war on Russia and France?",
+                "options": ["1914", "1915","1916","1917"],
+                "correctAnswer": "0"
+            },
+            {
+                "questionId": "3",
+                "questionText": "ICAO stands for",
+                "options": [
+                    "International Civil Aviation Organization",
+                    "Indian Corporation of Agriculture Organization",
+                    "Institute of Company of Accounts Organization",
+                    "None of the above"
+                ],
+                "correctAnswer": "0"
+            },
+            {
+                "questionId": "4",
+                "questionText": "India has largest deposits of ____ in the world.",
+                "options": [
+                    "gold",
+                    "copper",
+                    "mica",
+                    "None of the above"
+                ],
+                "correctAnswer":"2"
+            },
+            {
+                "questionId": "5",
+                "questionText": "How many Lok Sabha seats belong to Rajasthan?",
+                "options": [
+                    "32",
+                    "25",
+                    "30",
+                    "17"
+                ],
+                "correctAnswer": "1"
+            },
+            {
+                "questionId": "6",
+                "questionText": "What is the capital of Andhra Pradesh?",
+                "options": [
+                    "Hyderabad",
+                    "Visakhapatnam",
+                    "Tirupati",
+                    "Amaravati"
+                ],
+                "correctAnswer": "4"
+            },
+            {
+                "questionId": "7",
+                "questionText": "Which river flows through the Deccan Plateau?",
+                "options": [
+                    "Ganga",
+                    "Godavari",
+                    "Krishna",
+                    "Narmada"
+                ],
+                "correctAnswer": "2"
+            },
+            {
+                "questionId": "8",
+                "questionText": "Which Indian state is known as the \"Spice Garden of India\"?",
+                "options": [
+                    "Kerala",
+                    "Tamil Nadu",
+                    "Karnataka",
+                    "Goa"
+                ],
+                "correctAnswer": "1"
+            },
+            {
+                "questionId": "9",
+                "questionText": "Which Indian city hosts the Kumbh Mela?",
+                "options": [
+                    "Haridwar",
+                    "Ujjain",
+                    "Prayagraj",
+                    "Nasik"
+                ],
+                "correctAnswer": "3"
+            },
+            {
+                "questionId": "10",
+                "questionText": "The highest mountain peak in India is located in which state?",
+                "options": [
+                    "Jammu and Kashmir",
+                    "Sikkim",
+                    "Uttarakhand",
+                    "Himachal Pradesh"
+                ],
+                "correctAnswer": "1"
+            }
+        ]
+    },
+    {
+        "assignmentId": 1,
+        "assignmentName": "Assignment 2",
+        "questions": [
+            {
+                "questionId": "24",
+                "questionText": "Which Indian city is known as the \"Silicon Valley of India\"?",
+                "options": [
+                    "Bangalore",
+                    "Hyderabad",
+                    "Pune",
+                    "Chennai"
+                ],
+                "correctAnswer": "1"
+            },
+            {
+                "questionId": "25",
+                "questionText": "Which Indian monument is a UNESCO World Heritage Site and known for its intricate carvings?",
+                "options": [
+                    "Khajuraho Temples",
+                    "Ajanta and Ellora Caves",
+                    "Taj Mahal",
+                    "Hampi"
+                ],
+                "correctAnswer": "0"
+            },
+            {
+                "questionId": "26",
+                "questionText": "Which Indian classical dance form originated in Kerala?",
+                "options": [
+                    "Bharatanatyam",
+                    "Kathak",
+                    "Odissi",
+                    "Mohiniyattam"
+                ],
+                "correctAnswer": "3"
+            },
+            {
+                "questionId": "27",
+                "questionText": "What is the main ingredient in the popular Indian dish, \"Samosa\"?",
+                "options": [
+                    "Potatoes",
+                    "Lentils",
+                    "Chickpeas",
+                    "Paneer"
+                ],
+                "correctAnswer": "2"
+            },
+            {
+                "questionId": "28",
+                "questionText": "Which Indian state is known for its beautiful backwaters?",
+                "options": [
+                    "Kerala",
+                    "Goa",
+                    "Andhra Pradesh",
+                    "West Bengal"
+                ],
+                "correctAnswer": "1"
+            },
+            {
+                "questionId": "29",
+                "questionText": "Which Indian spice is known as the \"King of Spices\"?",
+                "options": [
+                    "Cardamom",
+                    "Saffron",
+                    "Black Pepper",
+                    "Turmeric"
+                ],
+                "correctAnswer": "2"
+            },
+            {
+                "questionId": "30",
+                "questionText": "What is the currency symbol for the Indian Rupee?",
+                "options": [
+                    "₹",
+                    "৳",
+                    "Rp",
+                    "₨"
+                ],
+                "correctAnswer": "0"
+            },
+            {
+                "questionId": "31",
+                "questionText": "Which Indian city hosted the first Cricket World Cup in 1983?",
+                "options": [
+                    "Mumbai",
+                    "Bangalore",
+                    "Kolkata",
+                    "Chennai"
+                ],
+                "correctAnswer": "2"
+            },
+            {
+                "questionId": "32",
+                "questionText": "Which Indian festival celebrates the Hindu goddess Durga's victory over the demon Mahishasura?",
+                "options": [
+                    "Holi",
+                    "Dussehra",
+                    "Diwali",
+                    "Durga Puja"
+                ],
+                "correctAnswer": "3"
+            },
+            {
+                "questionId": "33",
+                "questionText": "Which Indian state is known as the \"Land of the Thunder Dragon\"?",
+                "options": [
+                    "Arunachal Pradesh",
+                    "Sikkim",
+                    "Uttarakhand",
+                    "Jammu and Kashmir"
+                ],
+                "correctAnswer": "1"
+            }
+        ]
+    },
+    {
+        "assignmentId": 2,
+        "assignmentName": "Assignment 3",
+        "questions": [
+            {
+                "questionId": "34",
+                "questionText": "Which Indian monument is known as the \"Palace of Winds\"?",
+                "options": [
+                    "Hawa Mahal",
+                    "Red Fort",
+                    "Charminar",
+                    "Mysore Palace"
+                ],
+                "correctAnswer": "0"
+            },
+            {
+                "questionId": "35",
+                "questionText": "Which Indian musical instrument is known for its distinctive twanging sound?",
+                "options": [
+                    "Sitar",
+                    "Veena",
+                    "Sarangi",
+                    "Tabla"
+                ],
+                "correctAnswer": "2"
+            },
+            {
+                "questionId": "36",
+                "questionText": "Which Indian martial art form originated in Kerala and focuses on self-defense?",
+                "options": [
+                    "Kalaripayattu",
+                    "Silambam",
+                    "Gatka",
+                    "Mallakhamb"
+                ],
+                "correctAnswer": "0"
+            },
+            {
+                "questionId": "37",
+                "questionText": "Which Indian dessert is made from rice, milk, and sugar?",
+                "options": [
+                    "Kheer",
+                    "Gulab Jamun",
+                    "Jalebi",
+                    "Rasmalai"
+                ],
+                "correctAnswer": "0"
+            },
+            {
+                "questionId": "38",
+                "questionText": "Which Indian river is considered sacred by Hindus and flows through the Himalayas?",
+                "options": [
+                    "Ganga",
+                    "Yamuna",
+                    "Godavari",
+                    "Krishna"
+                ],
+                "correctAnswer": "0"
+            },
+            {
+                "questionId": "39",
+                "questionText": "Which Indian state is known for its beautiful beaches and coral reefs?",
+                "options": [
+                    "Goa",
+                    "Kerala",
+                    "Andhra Pradesh",
+                    "Tamil Nadu"
+                ],
+                "correctAnswer": "0"
+            },
+            {
+                "questionId": "40", "questionText": "Which Indian hill station is known as the \"Queen of the Hills\"?",
+                "options": [
+                    "Shimla",
+                    "Darjeeling",
+                    "Munnar",
+                    "Ooty"
+                ],
+                "correctAnswer": "0"
+            },
+            {
+                "questionId": "41",
+                "questionText": "Which Indian festival celebrates the birth of Lord Krishna?",
+                "options": [
+                    "Holi",
+                    "Dussehra",
+                    "Janmashtami",
+                    "Diwali"
+                ],
+                "correctAnswer": "2"
+            },
+            {
+                "questionId": "42",
+                "questionText": "What is the national sport of India?",
+                "options": [
+                    "Cricket",
+                    "Hockey",
+                    "Kabaddi",
+                    "Football"
+                ],
+                "correctAnswer": "0"
+            },
+            {
+                "questionId": "43",
+                "questionText": "Which Indian city is known as the \"City of Joy\"?",
+                "options": [
+                    "Mumbai",
+                    "Bangalore",
+                    "Kolkata",
+                    "Chennai"
+                ],
+                "correctAnswer": "2"
+            }
+        ]
+    },
+    {
+        "assignmentId": 3,
+        "assignmentName": "Assignment 4",
+        "questions": [
+            {
+                "questionId": "44",
+                "questionText": "Which Indian city is known for its Bollywood film industry and iconic landmarks like Gateway of India?",
+                "options": [
+                    "Mumbai",
+                    "Chennai",
+                    "Kolkata",
+                    "Bangalore"
+                ],
+                "correctAnswer": "0"
+            },
+            {
+                "questionId": "45",
+                "questionText": "Which Indian classical music genre is known for its intricate vocal embellishments and rhythmic variations?",
+                "options": [
+                    "Carnatic",
+                    "Hindustani",
+                    "Folk music",
+                    "Pop music"
+                ],
+                "correctAnswer": "0"
+            },
+            {
+                "questionId": "46",
+                "questionText": "Which Indian spice is used in Ayurveda and has a strong, pungent aroma?",
+                "options": [
+                    "Turmeric",
+                    "Cardamom",
+                    "Ginger",
+                    "Asafoetida"
+                ],
+                "correctAnswer": "3"
+            },
+            {
+                "questionId": "47",
+                "questionText": "Which Indian festival celebrates the Hindu goddess Durga's victory over the demon Mahishasura and features vibrant processions?",
+                "options": [
+                    "Holi",
+                    "Dussehra",
+                    "Diwali",
+                    "Durga Puja"
+                ],
+                "correctAnswer": "3"
+            },
+            {
+                "questionId": "48",
+                "questionText": "Which Indian state is known for its breathtaking beaches, backwaters, and Ayurvedic wellness centers?",
+                "options": [
+                    "Kerala",
+                    "Goa",
+                    "Andhra Pradesh",
+                    "Tamil Nadu"
+                ],
+                "correctAnswer": "0"
+            },
+            {
+                "questionId": "49",
+                "questionText": "What is the official currency symbol for the Indian Rupee?",
+                "options": [
+                    "₹",
+                    "৳",
+                    "Rp",
+                    "₨"
+                ],
+                "correctAnswer": "0"
+            },
+            {
+                "questionId": "50", "questionText": "What is the traditional Indian attire worn by men for formal occasions?",
+                "options": [
+                    "Sherwani",
+                    "Kurta",
+                    "Dhoti",
+                    "Lungi"
+                ],
+                "correctAnswer": "0"
+            },
+            {
+                "questionId": "51",
+                "questionText": "Which Indian hill station is known as the \"Queen of the Hills\" and features colonial architecture and stunning views?",
+                "options": [
+                    "Shimla",
+                    "Darjeeling",
+                    "Munnar",
+                    "Ooty"
+                ],
+                "correctAnswer": "0"
+            },
+            {
+                "questionId": "52",
+                "questionText": "Which Indian dance form is known for its energetic movements and colorful costumes?",
+                "options": [
+                    "Bhangra",
+                    "Kuchipudi",
+                    "Odissi",
+                    "Bharatanatyam"
+                ],
+                "correctAnswer": "0"
+            },
+            {
+                "questionId": "53",
+                "questionText": "What is the largest cricket stadium in India?",
+                "options": [
+                    "Eden Gardens, Kolkata",
+                    "Melbourne Cricket Ground, Australia",
+                    "Wankhede Stadium, Mumbai",
+                    "M. Chinnaswamy Stadium, Bangalore"
+                ],
+                "correctAnswer": "0"
+            }
+        ]
+    },
+    {
+        "assignmentId": 4,
+        "assignmentName": "Assignment 5",
+        "questions": [
+            {
+                "questionId": "54",
+                "questionText": "Which Indian festival celebrates the harvest and features joyous folk dances and bonfire celebrations?",
+                "options": [
+                    "Pongal",
+                    "Onam",
+                    "Ganesh Chaturthi",
+                    "Lohri"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "questionId": "55",
+                "questionText": "What is the traditional Indian headwear worn by Hindu women, often adorned with a bindi?",
+                "options": [
+                    "Sari",
+                    "Lehenga",
+                    "Dupatta",
+                    "Mangtika (Tikka)"
+                ],
+                "correctAnswer": 3
+            },
+            {
+                "questionId": "56",
+                "questionText": "Which Indian classical dance form originated in Odisha and features graceful movements and storytelling through hand gestures?",
+                "options": [
+                    "Bharatanatyam",
+                    "Odissi",
+                    "Kuchipudi",
+                    "Kathak"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "questionId": "57",
+                "questionText": "Which Indian spice is known for its sweet and floral aroma and used in desserts like gajar ka halwa?",
+                "options": [
+                    "Cardamom",
+                    "Cinnamon",
+                    "Cumin",
+                    "Fennel seeds"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "questionId": "58",
+                "questionText": "What is the national sport of India, beloved for its thrilling matches and passionate fanbase?",
+                "options": [
+                    "Cricket",
+                    "Hockey",
+                    "Kabbadi",
+                    "Football"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "questionId": "59",
+                "questionText": "Which Indian Mughal monument is a UNESCO World Heritage Site and features intricate marble carvings and a reflecting pool?",
+                "options": [
+                    "Taj Mahal",
+                    "Red Fort",
+                    "Hawa Mahal",
+                    "Qutub Minar"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "questionId": "60",
+                "questionText": "What is the traditional Indian system of medicine that focuses on holistic health and natural remedies?",
+                "options": [
+                    "Ayurveda",
+                    "Unani",
+                    "Yoga",
+                    "Siddha medicine"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "questionId": "61",
+                "questionText": "Which Indian folktale collection features Panchatantra and Jataka stories, known for their wisdom and moral lessons?",
+                "options": [
+                    "Ramayana",
+                    "Mahabharata",
+                    "Panchatantra",
+                    "Vedas"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "questionId": "62",
+                "questionText": "What is the name for the traditional Indian board game played with dice and strategy, similar to Ludo?",
+                "options": [
+                    "Chausar",
+                    "Pachisi",
+                    "Carrom",
+                    "Snakes and Ladders"
+                ],
+                "correctAnswer": 0
+            }
+        ]
+    }
+
+]

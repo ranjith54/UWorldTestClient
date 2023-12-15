@@ -3,7 +3,7 @@
         <div class="instructions-container">
             <p class="instruction-header"> Instructions </p>
             <ol class="list-container">
-                <li class="list-item"><span class="menu-item">Total Questions: </span> 10 </li>
+                <li class="list-item"><span class="menu-item">Total Questions: </span> {{assignmentData?.questions?.length}} </li>
                 <li class="list-item"><span class="menu-item">Type of Questions: </span> MCQs </li>
                 <li class="list-item"><span class="menu-item">Duration: </span> 10 Mins </li>
                 <li class="list-item"><span class="menu-item">Marking Scheme: </span> Every Correct response, get 1 mark </li>
@@ -15,6 +15,9 @@
                 <button mat-raised-button class="mat-custom-button" color="primary" [disabled]="!isAuthenticated" (click)="startTest()">
                     Start Assignment
                 </button>
+            </div>
+            <div class="mt-3" *ngIf="isAuthenticated">
+                <p class="authentication-message">Authenticated Successfully! You can start the test now.</p>
             </div>
         </div>
         <div class="image-container">

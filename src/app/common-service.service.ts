@@ -10,7 +10,7 @@ export class CommonServiceService {
   constructor(private http: HttpClient, private router: Router, private activedRoute: ActivatedRoute) { }
 
   public registerUser(data: any){
-    return this.http.post('https://uworldtestinterfaceapi.azurewebsites.net/api/Users/register', data)
+    return this.http.post('https://localhost:7285/api/Users/register', data)
   }
   
   public getUserDeatils(email:string, password:string) {
@@ -58,5 +58,9 @@ export class CommonServiceService {
       result += String.fromCharCode(array[i] - 10);
     }
     return result;
+  }
+  
+  public getAssignmentsData() {
+    return this.http.get('../assets/assignments-data.json');
   }
 }

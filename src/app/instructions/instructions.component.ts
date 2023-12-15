@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AuthenticateDialogComponent } from '../authenticate-dialog/authenticate-dialog.component';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { CommonServiceService } from '../common-service.service';
 
 @Component({
   selector: 'app-instructions',
@@ -11,8 +12,24 @@ import { Router } from '@angular/router';
 export class InstructionsComponent {
   
   isAuthenticated: boolean = false;
-  constructor(public dialog: MatDialog, private route: Router) {
-    
+  assignmentId: number = 0;
+  assignmentData: any;
+  constructor(public dialog: MatDialog, private route: Router, private activedRoute: ActivatedRoute,
+    private commonService: CommonServiceService
+    ) {
+    let tempAssignmentId = this.activedRoute.snapshot.paramMap.get('assignmentId');
+    if(tempAssignmentId) {
+      this.assignmentId = +tempAssignmentId;
+    }
+    else {
+      this.assignmentId = 0;
+    }
+
+    this.commonService.getAssignmentsData().subscribe((result:any) => {
+      this.assignmentData = result[this.assignmentId];
+      console.log(this.assignmentData)
+    })
+
   }
 
   public onClickAuthenticate() {
@@ -27,6 +44,6 @@ export class InstructionsComponent {
   }
 
   startTest() {
-    this.route.navigate(['./test-interface'])
+    this.route.navigate([`./test-interface/${this.assignmentId}`])
   }
 }
