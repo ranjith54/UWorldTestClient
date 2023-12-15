@@ -4,6 +4,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url('../../assets/Uworld-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .login-container {
@@ -12,6 +15,8 @@
     min-height: 50vh;
     width: 30%;
     border-radius: 8px;
+    align-self: flex-end;
+    margin: 50px;
 }
 
 .logo-container {

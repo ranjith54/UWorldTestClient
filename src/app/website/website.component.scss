@@ -10,6 +10,7 @@
 
         .logo {
             float: left;
+            padding: 10px;
         }
 
         .buttons {
@@ -24,23 +25,10 @@
     .hr_container {
         text-align: center;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
         padding-top: 6%;
         align-items: center;
-
-
-        .into-text {
-            font-size: 15px;
-            line-height: 1.5;
-            margin: -10px auto 20px;
-            color: #39424E;
-            text-align: center;
-            white-space: pre-wrap;
-
-            .break-lines{
-             padding-left: 25%;
-            }
-        }
+        padding-right: 2%;
 
 
         .home22-intro-title {
@@ -73,25 +61,36 @@
         }
 
         .curousel {
-            display: flex;
-            justify-content: center;
+            // display: flex;
+            // justify-content: center;
 
-            img {
-                height: 400px;
-                object-fit: cover;
-            }
+            // img {
+            //     height: 400px;
+            //     object-fit: cover;
+            // }
+            height: 400px;
+            width: 300px;
         }
     }
 
     .fetures {
         display: flex;
+        flex-direction: row-reverse;
         justify-content: space-evenly;
+        align-items: center;
         padding-top: 4%;
         padding-bottom: 5%;
 
 
         .feture-img {
-            height: 50%;
+            height: 15%;
+            width: 25%;
+
+            .leftt-image {
+                height: 100%;
+                width: 100%;
+                border-radius: 63%;
+            }
         }
 
         .feture-text {
@@ -132,4 +131,23 @@
             color: #e3dcdc;
         }
     }
+}
+
+.log-image {
+    height: 50px;
+    width: 200px;
+}
+
+.into-text {
+    font-size: 15px;
+    line-height: 1.5;
+    margin: -10px auto 20px;
+    color: #39424E;
+    width: 60%;  
+    text-align: left;
+} 
+
+.inner {
+    height: 100%;
+    width: 100%;
 }

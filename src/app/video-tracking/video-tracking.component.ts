@@ -93,7 +93,7 @@ export class VideoTrackingComponent {
         }
         if (EDistance && EDistance > 0.6) {
           if (!this.haveWarning) {
-            this.sendWarning('You are not a Authenticated User!')
+            this.sendWarning('You are not an Authenticated User!')
           }
         }
 

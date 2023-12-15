@@ -77,18 +77,25 @@ export class AuthenticateDialogComponent {
       let image2Input = this.image2?.nativeElement;
       let firstImageFaceDetection;
       let secondImageFaceDetection;
-      if(image1Input) {
-        firstImageFaceDetection = await faceapi.detectSingleFace(image1Input, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceDescriptor();
-      }
-      if(image2Input) {
-        secondImageFaceDetection = await faceapi.detectSingleFace(image2Input, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceDescriptor();
-      }
-
-      if(firstImageFaceDetection && secondImageFaceDetection){
-        let EDistance = faceapi.euclideanDistance(firstImageFaceDetection.descriptor, secondImageFaceDetection.descriptor);
-        console.log(EDistance)
-        if(EDistance <= 0.6) {
-          this.dialogRef.close(true)
+      let allfaces = await faceapi.detectAllFaces(image1Input, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions();
+      if(allfaces.length === 1){
+        if(image1Input) {
+          firstImageFaceDetection = await faceapi.detectSingleFace(image1Input, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceDescriptor();
+        }
+        if(image2Input) {
+          secondImageFaceDetection = await faceapi.detectSingleFace(image2Input, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceDescriptor();
+        }
+  
+        if(firstImageFaceDetection && secondImageFaceDetection){
+          let EDistance = faceapi.euclideanDistance(firstImageFaceDetection.descriptor, secondImageFaceDetection.descriptor);
+          console.log(EDistance)
+          if(EDistance <= 0.6) {
+            this.dialogRef.close(true)
+          }
+          else {
+            this.errorMessage = 'Failed to Authenticate. Please try again !'
+            this.isAuthenticating = false;
+          }
         }
         else {
           this.errorMessage = 'Failed to Authenticate. Please try again !'
