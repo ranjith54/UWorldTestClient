@@ -17,7 +17,7 @@ export class AuthenticateDialogComponent {
   public deviceId?: string;
   public errors: WebcamInitError[] = [];
   errorMessage: string = ''
-
+  isAuthenticating: boolean = false;
   userImageDateUrls?: string;
   @ViewChild('image1') public image1?: ElementRef;
   @ViewChild('image2') public image2?: ElementRef;
@@ -63,6 +63,7 @@ export class AuthenticateDialogComponent {
   }
 
   public triggerSnapshot() {
+    this.isAuthenticating = true;
     this.trigger.next();
     setTimeout(() => {
       this.authenticate()
@@ -91,10 +92,12 @@ export class AuthenticateDialogComponent {
         }
         else {
           this.errorMessage = 'Failed to Authenticate. Please try again !'
+          this.isAuthenticating = false;
         }
       }
       else {
         this.errorMessage = 'Failed to Authenticate. Please try again !'
+        this.isAuthenticating = false;
       }
     }
   }

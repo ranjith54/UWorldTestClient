@@ -11,7 +11,6 @@
 }
 
 .main-test-container {
-    background-color: #FAFBFE;
     min-height: 90vh;
     padding: 20px;
 }
@@ -58,7 +57,12 @@
 }
 
 .option-button {
-    background-color: #EBF3FF !important;
+    background-color: #EBF3FF ;
+    width: 35%;
+    margin: 15px
+}
+.option-button-answered {
+    background-color: green !important;
     width: 35%;
     margin: 15px
 }

@@ -61,21 +61,21 @@ export class VideoTrackingComponent {
 
   async detectFaces() {
     this.elRef.nativeElement.querySelector('video').addEventListener('play', async () => {
-      this.canvas = await faceapi.createCanvasFromMedia(this.videoInput);
+      // this.canvas = await faceapi.createCanvasFromMedia(this.videoInput);
 
-      this.canvasEl = this.canvasRef?.nativeElement;
-      this.canvasEl.appendChild(this.canvas);
-      this.canvas.setAttribute('id', 'canvass');
-      this.canvas.setAttribute(
-        'style', `position: fixed;
-        top:0; left: 0`
-      );
+      // this.canvasEl = this.canvasRef?.nativeElement;
+      // this.canvasEl.appendChild(this.canvas);
+      // this.canvas.setAttribute('id', 'canvass');
+      // this.canvas.setAttribute(
+      //   'style', `position: fixed;
+      //   top:0; left: 0`
+      // );
       this.displaySize = {
         width: this.videoInput.width,
         height: this.videoInput.height
       }
 
-      faceapi.matchDimensions(this.canvas, this.displaySize);
+      // faceapi.matchDimensions(this.canvas, this.displaySize);
       this.interval = setInterval(async () => {
         this.detection = await faceapi.detectAllFaces(this.videoInput,
           new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withAgeAndGender().withFaceExpressions();
@@ -84,8 +84,8 @@ export class VideoTrackingComponent {
           this.displaySize
         );
         console.log(this.detection)
-        let face: any = await faceapi.detectSingleFace(this.videoInput, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceDescriptor();
-        let existingFace: any = await faceapi.detectSingleFace(this.image1?.nativeElement, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceDescriptor();
+        let face: any = await faceapi.detectSingleFace(this.videoInput, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions().withFaceDescriptor();
+        let existingFace: any = await faceapi.detectSingleFace(this.image1?.nativeElement, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions().withFaceDescriptor();
 
         let EDistance;
         if (face && existingFace) {
@@ -108,12 +108,12 @@ export class VideoTrackingComponent {
             this.sendWarning('Please align your face with the camera and make sure you are alone while taking the test.');
           }
         }
-        this.canvas.getContext('2d').clearRect(
-          0, 0, this.canvas.width, this.canvas.height
-        );
+        // this.canvas.getContext('2d').clearRect(
+        //   0, 0, this.canvas.width, this.canvas.height
+        // );
         //faceapi.draw.drawDetections(this.canvas, this.resizedDetections);
         //faceapi.draw.drawFaceLandmarks(this.canvas, this.resizedDetections);
-      }, 1000)
+      }, 2000)
     })
   }
 
