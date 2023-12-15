@@ -6,7 +6,12 @@
                 <li class="list-item"><span class="menu-item">Total Questions: </span> {{assignmentData?.questions?.length}} </li>
                 <li class="list-item"><span class="menu-item">Type of Questions: </span> MCQs </li>
                 <li class="list-item"><span class="menu-item">Duration: </span> 10 Mins </li>
-                <li class="list-item"><span class="menu-item">Marking Scheme: </span> Every Correct response, get 1 mark </li>
+                <li class="list-item"><span class="menu-item">Technical Requirements: </span> Ensure that you have a reliable internet connection throughout the exam. </li>
+                <li class="list-item"><span class="menu-item">Accessing the Exam: </span> Log in to the exam platform using your provided credentials. </li>
+                <li class="list-item"><span class="menu-item">Identity Verification: </span> Follow the platform's instructions for identity verification carefully.</li>
+                <li class="list-item"><span class="menu-item">Communication Rules: </span> Strictly adhere to communication rules. Avoid talking or using external communication tools during the exam unless explicitly permitted. </li>
+                <li class="list-item"><span class="menu-item">Feedback and Concerns: </span> If you have feedback or encounter any issues, report them to the designated contact person or support email provided. </li>
+                <p class="pt-4">Note: Failure to comply with these instructions may result in consequences outlined by the exam administrator.</p>
             </ol>
             <div class="buttons-container">
                 <button mat-raised-button class="mat-custom-button" color="primary" (click)="onClickAuthenticate()" [disabled]="isAuthenticated">

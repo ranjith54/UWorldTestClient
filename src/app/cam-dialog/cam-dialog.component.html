@@ -1,11 +1,15 @@
 <div class="dialog-main-container">
-    <div class="dialog-header-container">
-        <p>Upload Photo</p>
-        <button mat-icon-button mat-dialog-close>
-            <i class="fas fa-1x fa-times"></i>
-        </button>
+    <div>
+        <div class="dialog-header-container">
+            <p class="upload-text">Upload Photo</p>
+            <button mat-icon-button mat-dialog-close >
+                <i class="fas fa-1x fa-times"></i>
+            </button>
+        </div>
     </div>
-    <p class="instruction-message">{{getImageMessage()}}</p>
+    <div class="pr-4">
+        <p class="instruction-message">{{getImageMessage()}}</p>
+    </div>
     <div class="video-container">
         <webcam [height]="350" [width]="600" [trigger]="triggerObservable"
             (imageCapture)="handleImage($event)" *ngIf="showWebcam"
@@ -16,9 +20,9 @@
         ></webcam>
     </div>
     <div class="action-buttons-container">
-        <button mat-raised-button color="primary" class="mr-3"  (click)="triggerSnapshot();"> Capture Photo </button>
+        <button mat-raised-button color="primary" class="mr-3"  (click)="triggerSnapshot();" [disabled]="picturesTaken.length > 3"> Capture Photo </button>
         <button mat-raised-button color="primary" class="mr-3"  (click)="clearTakenPhotos();"> Clear Photos </button>
-        <button mat-raised-button color="primary"  (click)="savePhotos();"> Save Photos </button>
+        <button mat-raised-button color="primary"  (click)="savePhotos();"  [disabled]="disablesave()"> Save Photos </button>
     </div>
     <div class="taken-images">
         <div *ngIf="picturesTaken[0]" class="image-container">
@@ -40,7 +44,7 @@
             </div>
         </div>
     </div>
-    <div class="error-message">
+    <div class="error-message" >
         {{errorMessage}}
     </div>
 </div>

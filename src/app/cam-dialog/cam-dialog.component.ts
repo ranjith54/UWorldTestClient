@@ -4,6 +4,7 @@ import { WebcamImage, WebcamInitError } from 'ngx-webcam';
 import { Observable, Subject } from 'rxjs';
 import * as faceapi from 'face-api.js';
 import { CommonServiceService } from '../common-service.service';
+import { split } from '@tensorflow/tfjs-core';
 
 @Component({
   selector: 'app-cam-dialog',
@@ -59,6 +60,7 @@ export class CamDialogComponent {
   public get triggerObservable(): Observable<void> {
     return this.trigger.asObservable();
   }
+  
 
   public get nextWebcamObservable(): Observable<boolean|string> {
     return this.nextWebcam.asObservable();
@@ -80,12 +82,17 @@ export class CamDialogComponent {
   }
 
   public triggerSnapshot() {
-    this.trigger.next();
+    if(this.picturesTaken.length < 3){
+      this.trigger.next();
+    }
   }
 
   public clearTakenPhotos() {
     this.picturesTaken = []
     this.errorMessage = ''
+  }
+  public showError(){
+    return this.picturesTaken.length == 3 && this.errorMessage;
   }
 
   public async savePhotos() {
@@ -132,7 +139,7 @@ export class CamDialogComponent {
 
   getImageMessage(): string {
     if(this.picturesTaken.length === 0){
-      return 'Please Capture you front face!';
+      return 'Please Capture your front face!';
     }
     if(this.picturesTaken.length === 1) {
       return 'Please turn your face left slightly!';
@@ -147,6 +154,12 @@ export class CamDialogComponent {
   }
 
   removePhoto(index: number) {
-    console.log('called')
+    if(this.picturesTaken.length > index ){
+      this.picturesTaken.splice(index, 1);
+    }
   }
+
+  public  disablesave(): boolean{
+    return ((this.picturesTaken.length == 3) ? false : true);
+   }
 }
