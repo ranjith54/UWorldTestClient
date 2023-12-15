@@ -15,7 +15,8 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'test-interface/:assignmentId', component: TestInterfaceComponent},
   {path: 'instructions/:assignmentId', component: InstructionsComponent},
-  {path: 'face-api', component: WebcamComponent}
+  {path: 'face-api', component: WebcamComponent},
+  { path: '**', redirectTo:'' }
 ];
 
 @NgModule({

@@ -3,12 +3,16 @@
     display: flex;
     flex-direction: column;
 }
+.upload-text{
+font-size: 22px;
+}
 
 .dialog-header-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: -1%;
 }
 
 .video-container {
@@ -47,6 +51,8 @@
 
 .instruction-message {
     text-align: center;
+    color: red;
+    font-size: 22px;
 }
 
 .close-button {

@@ -9,6 +9,12 @@ import { Router } from '@angular/router';
 export class WebsiteComponent {
   constructor(private router: Router){
   }
+  ngOnInit(){
+    let userdetails = localStorage.getItem('userDetails');
+    if(userdetails){
+      this.router.navigate(['/home']) 
+     }
+  }
   signup(){
     this.router.navigate(['/register'])  }
 

@@ -1,23 +1,23 @@
 .page {
     background-color: aliceblue;
     min-height: 100vh;
-    
+
     .uworld {
         margin-left: 50px;
         display: flex;
         justify-content: space-between;
-        
+
         .logo {
-                float: left;
-            }
-        
-            .buttons {
-                padding-top: 2%;
-                padding-bottom: 2%;
-                width: 11%;
-                display: flex;
-                margin-right: 10px;
-            }
+            float: left;
+        }
+
+        .buttons {
+            padding-top: 2%;
+            padding-bottom: 2%;
+            width: 11%;
+            display: flex;
+            margin-right: 10px;
+        }
     }
 
     .hr_container {
@@ -25,8 +25,8 @@
         display: flex;
         justify-content: space-evenly;
         padding-top: 6%;
-    
-    
+
+
         .into-text {
             font-size: 15px;
             line-height: 1.5;
@@ -34,8 +34,8 @@
             color: #39424E;
             text-align: center;
         }
-    
-    
+
+
         .home22-intro-title {
             font-size: 42px;
             font-weight: 400;
@@ -44,8 +44,8 @@
             letter-spacing: normal;
             margin: 0 0 0;
         }
-    
-    
+
+
         .signup-button {
             /* Green */
             padding: 15px 32px;
@@ -55,7 +55,7 @@
             font-size: 16px;
             margin-right: 100px;
         }
-    
+
         .login-button {
             padding: 15px 32px;
             text-align: center;
@@ -64,18 +64,60 @@
             font-size: 16px;
             margin-left: 40px;
         }
-    }
-    .gap{
-        margin-bottom: 50px;
+
+        .curousel {
+            display: flex;
+            justify-content: center;
+
+            img {
+                height: 400px;
+                object-fit: cover;
+            }
+        }
     }
 
-    .curousel{
+    .fetures {
         display: flex;
-        justify-content: center;
-        img {
-            height: 400px;
-            object-fit: cover;
-          }
+        justify-content: space-evenly;
+        padding-top: 4%;
+
+        .feture-img {
+            height: 50%;
+        }
+
+        .feture-text {
+            display: flex;
+            justify-content: center;
+        }
+        .bullet-header {
+            font-size: 42px;
+            font-weight: 400;
+            line-height: 44px;
+            font-family: math;
+            letter-spacing: normal;
+            margin: 0 0 0;
+            padding-top: 3%;
+        }
+        .bullet-text{
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 44px;
+            font-family: math;
+            letter-spacing: normal;
+            margin: 0 0 0;
+            padding-top: 3%;
+        }
+    }
+    .footer{
+        
+        display: flex;
+        padding-top: 5%;
+        justify-content: space-between;
+        .icons{
+            margin-right: 10%;
+        }
+        .terms{
+            margin-left: 10%;
+        }
     }
 }
-
