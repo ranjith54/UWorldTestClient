@@ -18,6 +18,7 @@ export class TestInterfaceComponent {
   display: any;
   videoDialogRef: any;
 
+
   constructor(public dialog: MatDialog, private route: ActivatedRoute, private commonService: CommonServiceService, private router:Router) {
     let assignmentId = this.route.snapshot.paramMap.get('assignmentId');
     if(assignmentId) {
@@ -50,19 +51,20 @@ export class TestInterfaceComponent {
   }
   loadAssigmentData(assignmentId: number) {
     this.commonService.getAssignmentsData().subscribe((result: any) => {
-      console.log(result[assignmentId])
       this.questionsData = result[assignmentId].questions;
-      console.log(this.questionsData)
       this.currentQuestionData = this.questionsData[this.currentQuestionIndex]
-      this.startTimer(this.questionsData?.length)
+      this.startTimer(this.questionsData?.length);
+      this.totalcount();
     })
+  }
+   totalcount(){
+    return this.questionsData?.length - this.questionsData.filter((x:any) => x.sumbittedAnswer != "").length;
   }
 
   onClickPreviousQuestion() {
     if(this.currentQuestionIndex > 0){
       this.currentQuestionIndex = this.currentQuestionIndex - 1;
       this.currentQuestionData = this.questionsData[this.currentQuestionIndex];
-      console.log(this.currentQuestionData)
     }
   }
 
@@ -104,5 +106,17 @@ export class TestInterfaceComponent {
   submitTest() {
     this.videoDialogRef.close();
     this.router.navigate(['./home'])
+  }
+
+
+  answered(item: any){
+    return this.currentQuestionData.sumbittedAnswer == item;
+  }
+  sumbitted(item: any){
+    this.currentQuestionData.sumbittedAnswer = item;
+    console.log(this.currentQuestionData.sumbittedAnswer)
+  }
+  answeredCount(): number{
+  return this.questionsData.filter((x:any) => x.sumbittedAnswer != "").length;
   }
 }

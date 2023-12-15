@@ -11,7 +11,7 @@
                 <div class="question-container">
                     <p class="question">{{currentQuestionData?.questionId}}. {{currentQuestionData?.questionText}}</p>
                     <div class="options-container">
-                        <button mat-raised-button class="option-button" *ngFor="let item of currentQuestionData?.options"> {{item}}
+                        <button mat-raised-button [ngClass]="!answered(item) ? 'option-button' : 'option-button-answered'"  *ngFor="let item of currentQuestionData?.options" (click)="sumbitted(item)" > {{item}}
                         </button>
                     </div>
                 </div>
@@ -32,11 +32,11 @@
                 <div class="navigatior">
                     <div class="attempt-details-container">
                         <p class="para1">
-                            <span class="answered"> &nbsp; 0 </span>
+                            <span class="answered"> &nbsp; {{answeredCount()}} </span>
                             <span> Answered Questions</span>
                         </p>
                         <p class="para1">
-                            <span  class="un-answered"> 10 </span>
+                            <span  class="un-answered"> {{totalcount()}} </span>
                             <span> Unanswered Questions </span>
                         </p>
                     </div>
