@@ -1,7 +1,8 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import * as faceapi from 'face-api.js';
 import { WarningDialogComponent } from '../warning-dialog/warning-dialog.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-video-tracking',
@@ -18,11 +19,16 @@ export class VideoTrackingComponent {
 
   userImage?: string;
   interval: any;
-  video$?: Promise<MediaStream>
+  video$?: Promise<MediaStream>;
+  audioContext?: AudioContext;
+  analyser?: AnalyserNode;
+  dataArray?: Uint8Array;
+  rmsValue: number = 0;
+  warningCount: number = 5;
 
   @ViewChild('image1') public image1?: ElementRef;
 
-  constructor(private elRef: ElementRef, public dialog: MatDialog) {
+  constructor(private elRef: ElementRef, public dialog: MatDialog, public dialogRef: MatDialogRef<VideoTrackingComponent>, public route: Router) {
     let userData = localStorage.getItem('userDetails');
     if (userData)
       this.userImage = JSON.parse(userData).images[0];
@@ -50,13 +56,63 @@ export class VideoTrackingComponent {
   }
 
   startVideo() {
+    // Create an audio context
+    this.audioContext = new (window.AudioContext || window.AudioContext)();
+
+    // Create an analyser node
+    this.analyser = this.audioContext.createAnalyser();
+    this.analyser.fftSize = 256; // Adjust as needed
+
+    // Create a Uint8Array to hold the frequency data
+    this.dataArray = new Uint8Array(this.analyser.frequencyBinCount);
+
+
     this.videoInput = this.video?.nativeElement;
-    const constraints = { audio: false, video: { facingMode: "user", video: { frameRate: { ideal: 10, max: 15 } } } }
+    const constraints = { audio: true, video: { facingMode: "user", video: { frameRate: { ideal: 10, max: 15 } } } }
     this.video$ = navigator.mediaDevices.getUserMedia(constraints)
     this.video$.then((stream) => {
       this.videoInput.srcObject = stream;
+      const audioTrack = stream.getAudioTracks()[0];
+
+      // Create a new media stream with only the audio track
+      const audioStream = new MediaStream([audioTrack]);
+
+      // Connect the audio stream to the audio context
+      const source = this.audioContext?.createMediaStreamSource(audioStream);
+      if(this.analyser)
+        source?.connect(this.analyser);
+      this.processAudio()
     });
     this.detectFaces()
+  }
+  processAudio() {
+    
+    // Function to process audio data and update RMS value
+    const calculateRMS = () => {
+      // Get frequency data
+      if(this.dataArray)
+        this.analyser?.getByteFrequencyData(this.dataArray);
+
+      // Calculate RMS value
+      if(this.dataArray){
+        const rms = Math.sqrt(
+          this.dataArray?.reduce((acc, val) => acc + val * val, 0) / this.dataArray?.length
+        );
+        this.rmsValue = rms;
+        if(this.rmsValue > 70){
+          console.log(this.rmsValue)
+        }
+
+      }
+      // Update RMS value
+
+
+      // Call the function again on the next animation frame
+      requestAnimationFrame(calculateRMS);
+    };
+
+    // Start the calculation
+    calculateRMS();
   }
 
   async detectFaces() {
@@ -118,14 +174,24 @@ export class VideoTrackingComponent {
   }
 
   sendWarning(data: any) {
-    this.haveWarning = true
+    if(this.warningCount>0){
+      this.haveWarning = true
     this.dialog.open(WarningDialogComponent, {
       width: '450px',
       disableClose: true,
-      data: data
+      data: {
+        message: data,
+        count: this.warningCount
+      }
     }).afterClosed().subscribe(result => {
       this.haveWarning = false;
+      this.warningCount--
     })
+    }
+    else {
+      this.dialogRef.close();
+      this.route.navigate(['./home'])
+    }
   }
 
   ngOnDestroy() {

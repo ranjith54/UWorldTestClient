@@ -26,6 +26,7 @@
     "ngx-webcam": "^0.4.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
+    "web-audio-daw": "^4.13.2",
     "zone.js": "~0.12.0"
   },
   "devDependencies": {
@@ -45,5 +46,5 @@
     "fs": false,
     "os": false,
     "path": false
- }
+  }
 }
