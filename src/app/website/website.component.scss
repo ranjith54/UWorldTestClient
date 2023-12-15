@@ -80,6 +80,8 @@
         display: flex;
         justify-content: space-evenly;
         padding-top: 4%;
+        padding-bottom: 5%;
+
 
         .feture-img {
             height: 50%;
@@ -97,9 +99,10 @@
             letter-spacing: normal;
             margin: 0 0 0;
             padding-top: 3%;
+            padding-bottom: 2%;
         }
         .bullet-text{
-            font-size: 22px;
+            font-size: 32px;
             font-weight: 400;
             line-height: 44px;
             font-family: math;
@@ -109,7 +112,7 @@
         }
     }
     .footer{
-        
+        background-color: #007bff!important;
         display: flex;
         padding-top: 5%;
         justify-content: space-between;
@@ -118,6 +121,7 @@
         }
         .terms{
             margin-left: 10%;
+            color: #e3dcdc;
         }
     }
 }

@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { VideoTrackingComponent } from '../video-tracking/video-tracking.component';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 import { CommonServiceService } from '../common-service.service';
 
 @Component({
@@ -18,9 +18,7 @@ export class TestInterfaceComponent {
   display: any;
   videoDialogRef: any;
 
-  constructor(public dialog: MatDialog, private route: ActivatedRoute, private commonService: CommonServiceService,
-    public router: Router
-    ) {
+  constructor(public dialog: MatDialog, private route: ActivatedRoute, private commonService: CommonServiceService, private router:Router) {
     let assignmentId = this.route.snapshot.paramMap.get('assignmentId');
     if(assignmentId) {
       this.loadAssigmentData(+assignmentId);
@@ -40,7 +38,14 @@ export class TestInterfaceComponent {
       }
     })
   }
-
+  close(){
+    let userdetails = localStorage.getItem('userDetails');
+    if(userdetails){
+      this.router.navigate(['/home']) 
+     }else{
+      this.router.navigate(['']);
+     }
+  }
   loadAssigmentData(assignmentId: number) {
     this.commonService.getAssignmentsData().subscribe((result: any) => {
       console.log(result[assignmentId])
