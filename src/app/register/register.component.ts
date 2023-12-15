@@ -50,7 +50,7 @@ export class RegisterComponent {
   }
 
   onClickSignIn() {
-    if(this.firstName && this.lastName && this.email.valid && this.password && this.uploadedImages) {
+    if(this.firstName && this.lastName && this.email.valid && this.password && this.uploadedImages && this.uploadedImages.length > 0) {
       let registerObject: any = {
         firstName: this.firstName,
         lastName: this.lastName,
