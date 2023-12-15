@@ -41,8 +41,10 @@ export class TestInterfaceComponent {
   close(){
     let userdetails = localStorage.getItem('userDetails');
     if(userdetails){
+      this.videoDialogRef.close();
       this.router.navigate(['/home']) 
      }else{
+      this.videoDialogRef.close();
       this.router.navigate(['']);
      }
   }
