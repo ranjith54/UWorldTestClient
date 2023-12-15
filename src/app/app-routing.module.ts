@@ -7,6 +7,7 @@ import { TestInterfaceComponent } from './test-interface/test-interface.componen
 import { InstructionsComponent } from './instructions/instructions.component';
 import { WebcamComponent } from './webcam/webcam.component';
 import { WebsiteComponent } from './website/website.component';
+import { ProfilesComponent } from './profiles/profiles.component';
 
 const routes: Routes = [
   {path: '', component:WebsiteComponent},
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: 'test-interface/:assignmentId', component: TestInterfaceComponent},
   {path: 'instructions/:assignmentId', component: InstructionsComponent},
   {path: 'face-api', component: WebcamComponent},
+  {path: 'profiles', component: ProfilesComponent},
   { path: '**', redirectTo:'' }
 ];
 

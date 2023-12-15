@@ -26,6 +26,7 @@ import { AuthenticateDialogComponent } from './authenticate-dialog/authenticate-
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import { VideoTrackingComponent } from './video-tracking/video-tracking.component';
 import { WarningDialogComponent } from './warning-dialog/warning-dialog.component';
+import { ProfilesComponent } from './profiles/profiles.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { WarningDialogComponent } from './warning-dialog/warning-dialog.componen
     WebsiteComponent,
     AuthenticateDialogComponent,
     VideoTrackingComponent,
-    WarningDialogComponent
+    WarningDialogComponent,
+    ProfilesComponent
   ],
   imports: [
     BrowserModule,

@@ -30,7 +30,7 @@ export class LoginComponent {
       let Decrypted = this.commonService.Decrypt(EncryptedPassword)
       this.commonService.getUserDeatils(this.email.value, EncryptedPassword).subscribe(result => {
         localStorage.setItem('userDetails', JSON.stringify(result))
-        this.router.navigate(['./home'])
+        this.router.navigate(['./profiles'])
       })
     }
   }
