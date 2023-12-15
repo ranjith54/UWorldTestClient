@@ -16,7 +16,15 @@ export class VideoTrackingComponent {
   @ViewChild('canvas', { static: true })
   public canvasRef?: ElementRef;
 
-  constructor(private elRef: ElementRef, public dialog: MatDialog) {}
+  userImage?: string;
+
+  @ViewChild('image1') public image1?: ElementRef;
+
+  constructor(private elRef: ElementRef, public dialog: MatDialog) {
+    let userData = localStorage.getItem('userDetails');
+    if(userData)
+      this.userImage = JSON.parse(userData).images[0];
+  }
 
   stream: any;
   detection: any;
@@ -67,12 +75,22 @@ export class VideoTrackingComponent {
       faceapi.matchDimensions(this.canvas, this.displaySize);
       setInterval(async () => {
         this.detection = await faceapi.detectAllFaces(this.videoInput,
-          new faceapi.TinyFaceDetectorOptions()).withAgeAndGender().withFaceExpressions();
+          new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withAgeAndGender().withFaceExpressions();
           this.resizedDetections = faceapi.resizeResults(
             this.detection,
             this.displaySize
           );
-          console.log(this.detection)
+          let face:any = await faceapi.detectSingleFace(this.videoInput, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceDescriptor();
+          let existingFace: any =  await faceapi.detectSingleFace(this.image1?.nativeElement, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceDescriptor();
+
+          let EDistance;
+          if(face && existingFace) {
+            EDistance = faceapi.euclideanDistance(face.descriptor, existingFace.descriptor);
+          }
+          if(EDistance && EDistance > 0.6) {
+            this.sendWarning(this.detection)
+          }
+
           if(this.detection.length !== 1){
             if(!this.haveWarning){
               this.sendWarning(this.detection)

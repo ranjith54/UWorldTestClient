@@ -26,16 +26,16 @@ export class TestInterfaceComponent {
       this.loadAssigmentData(0);
     }
     
-    // this.dialog.open(VideoTrackingComponent, {
-    //   height: '200px',
-    //   width: '200px',
-    //   disableClose: true,
-    //   hasBackdrop: false,
-    //   position: {
-    //     bottom: '60px',
-    //     left: '30px'
-    //   }
-    // })
+    this.dialog.open(VideoTrackingComponent, {
+      height: '200px',
+      width: '200px',
+      disableClose: true,
+      hasBackdrop: false,
+      position: {
+        bottom: '60px',
+        left: '30px'
+      }
+    })
   }
 
   loadAssigmentData(assignmentId: number) {
