@@ -68,20 +68,20 @@ export class VideoTrackingComponent {
 
 
     this.videoInput = this.video?.nativeElement;
-    const constraints = { audio: true, video: { facingMode: "user", video: { frameRate: { ideal: 10, max: 15 } } } }
+    const constraints = { audio: false, video: { facingMode: "user", video: { frameRate: { ideal: 10, max: 15 } } } }
     this.video$ = navigator.mediaDevices.getUserMedia(constraints)
     this.video$.then((stream) => {
       this.videoInput.srcObject = stream;
-      const audioTrack = stream.getAudioTracks()[0];
+      // const audioTrack = stream.getAudioTracks()[0];
 
-      // Create a new media stream with only the audio track
-      const audioStream = new MediaStream([audioTrack]);
+      // // Create a new media stream with only the audio track
+      // const audioStream = new MediaStream([audioTrack]);
 
-      // Connect the audio stream to the audio context
-      const source = this.audioContext?.createMediaStreamSource(audioStream);
-      if(this.analyser)
-        source?.connect(this.analyser);
-      this.processAudio()
+      // // Connect the audio stream to the audio context
+      // const source = this.audioContext?.createMediaStreamSource(audioStream);
+      // if(this.analyser)
+      //   source?.connect(this.analyser);
+      // this.processAudio()
     });
     this.detectFaces()
   }
@@ -169,7 +169,7 @@ export class VideoTrackingComponent {
         // );
         //faceapi.draw.drawDetections(this.canvas, this.resizedDetections);
         //faceapi.draw.drawFaceLandmarks(this.canvas, this.resizedDetections);
-      }, 2000)
+      }, 1000)
     })
   }
 
