@@ -73,7 +73,7 @@ export class WebcamComponent implements OnInit {
       faceapi.matchDimensions(this.canvas, this.displaySize);
       setInterval(async () => {
         this.detection = await faceapi.detectAllFaces(this.videoInput,
-          new faceapi.TinyFaceDetectorOptions()).withAgeAndGender().withFaceExpressions();
+          new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions();
           this.resizedDetections = faceapi.resizeResults(
             this.detection,
             this.displaySize
@@ -96,36 +96,36 @@ export class WebcamComponent implements OnInit {
 
   public async detect() {
     console.log('clicked')
-    this.image1Input = this.image1?.nativeElement;
-    this.image2Input = this.image2?.nativeElement
-    const firstImageFaceDetection = await faceapi.detectSingleFace(this.image1Input, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceDescriptor();
-    console.log(firstImageFaceDetection)
+    // this.image1Input = this.image1?.nativeElement;
+    // this.image2Input = this.image2?.nativeElement
+    // const firstImageFaceDetection = await faceapi.detectSingleFace(this.image1Input, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions().withFaceDescriptor();
+    // console.log(firstImageFaceDetection)
 
-    const secondImageFaceDetection = await faceapi.detectSingleFace(this.image2Input, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceDescriptor();
-    console.log(secondImageFaceDetection)
+    // const secondImageFaceDetection = await faceapi.detectSingleFace(this.image2Input, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions().withFaceDescriptor();
+    // console.log(secondImageFaceDetection)
 
-    if (firstImageFaceDetection) {
-      const { x, y, width, height } = firstImageFaceDetection.detection.box;
-      this.renderFace(this.image1Input, x, y, width, height);
-    }
+    // if (firstImageFaceDetection) {
+    //   const { x, y, width, height } = firstImageFaceDetection.detection.box;
+    //   this.renderFace(this.image1Input, x, y, width, height);
+    // }
 
-    if (secondImageFaceDetection) {
-      const { x, y, width, height } = secondImageFaceDetection.detection.box;
-      this.renderFace(this.image2Input, x, y, width, height);
-    }
+    // if (secondImageFaceDetection) {
+    //   const { x, y, width, height } = secondImageFaceDetection.detection.box;
+    //   this.renderFace(this.image2Input, x, y, width, height);
+    // }
 
-    if(firstImageFaceDetection && secondImageFaceDetection){
-      // Using Euclidean distance to comapare face descriptions
-      this.EDistance = faceapi.euclideanDistance(firstImageFaceDetection.descriptor, secondImageFaceDetection.descriptor);
-      console.log(this.EDistance);
-      if(this.EDistance <= 0.5){
-        console.log('matched')
-        this.message = 'Matched';
-      }
-      else {
-        this.message = 'Not Matched';
-      }
-    }
+    // if(firstImageFaceDetection && secondImageFaceDetection){
+    //   // Using Euclidean distance to comapare face descriptions
+    //   this.EDistance = faceapi.euclideanDistance(firstImageFaceDetection.descriptor, secondImageFaceDetection.descriptor);
+    //   console.log(this.EDistance);
+    //   if(this.EDistance <= 0.5){
+    //     console.log('matched')
+    //     this.message = 'Matched';
+    //   }
+    //   else {
+    //     this.message = 'Not Matched';
+    //   }
+    // }
   }
 
   renderFace(image: any, x:any, y: any, width: any, height: any) {
