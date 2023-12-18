@@ -20,7 +20,7 @@
                 <button mat-raised-button class="mat-custom-button" color="primary" (click)="onClickAuthenticate()" [disabled]="isAuthenticated">
                     Authenticate
                 </button>
-                <button mat-raised-button class="mat-custom-button" color="primary" [disabled]="!isAuthenticated" (click)="startTest()">
+                <button mat-raised-button [ngClass]="isAuthenticated ? 'mat-custom-button': ''" color="primary" [disabled]="!isAuthenticated" (click)="startTest()">
                     Start Assignment
                 </button>
             </div>
